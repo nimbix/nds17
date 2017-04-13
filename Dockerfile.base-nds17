@@ -1,0 +1,16 @@
+FROM jarvice/app-neuralstyle
+
+USER root
+
+# Prerequisites
+WORKDIR /tmp
+RUN apt-get update && apt-get install -y git curl && apt-get clean
+
+# Install JARVICE image-common
+RUN curl -L "https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh" | bash -s -- --setup-nimbix-desktop
+
+# We are inheriting from an existing app (app-neuralstyle), so clean up
+# the application metadata so we can experiment in the tutorial
+RUN rm -f /etc/NAE/AppDef.json
+
+USER nimbix
