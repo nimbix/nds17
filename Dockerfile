@@ -23,7 +23,7 @@ USER root
 # Install an application to display an image
 # NB: apt-get clean is an image layer size optimization
 RUN apt-get update && \
-    apt-get install -y imagemagick curl && \
+    apt-get install -y pinta imagemagick curl && \
     apt-get clean
 
 # AppDef.json defines the workflow in the portal. See the JARVICE
@@ -40,7 +40,6 @@ COPY ./NAE/screenshot.png /etc/NAE/screenshot.png
 
 # This is an entrypoint wrapper script, which will be referenced in AppDef.json as the command
 COPY ./scripts/stylize.sh /usr/local/scripts/stylize.sh
-COPY ./scripts/display_wrapper.sh /usr/local/scripts/display_wrapper.sh
 
 COPY ./styles/starry_night.png /usr/local/styles/starry_night.png
 COPY ./styles/picasso.png /usr/local/styles/picasso.png

@@ -41,31 +41,7 @@
                     "name": "Display Image",
                     "description": "Select an image to display",
                     "type": "CONST",
-                    "value": "display",
-                    "positional": true,
-                    "required": true
-                },
-                "file": {
-                    "name": "Image",
-                    "description": "Image to display",
-                    "type": "FILE",
-                    "filter": "*.png|*.jpg",
-                    "positional": true,
-                    "required": true
-                }
-            }
-        },
-        "BetterDisplayImage": {
-            "path": "/usr/local/bin/nimbix_desktop",
-            "interactive": true,
-            "name": "Better Display",
-            "description": "Run a GUI command, and connect interactively directly from your web browser (requires Nimbix Desktop in image).",
-            "parameters": {
-                "command": {
-                    "name": "Display Image",
-                    "description": "Select an image to display",
-                    "type": "CONST",
-                    "value": "/usr/local/scripts/display_wrapper.sh",
+                    "value": "pinta",
                     "positional": true,
                     "required": true
                 },
