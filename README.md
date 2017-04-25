@@ -192,7 +192,10 @@ We may want to guide the users to use a set of standard stylization images witho
                 }
             },
             "machines": [
-                "ng*"
+                "ng4",
+                "ng5",
+                "ngd4",
+                "ngd5"
             ]
         }
 ```
