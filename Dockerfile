@@ -39,7 +39,6 @@ RUN curl --fail -X POST "https://api.jarvice.com/jarvice/validate" -d@/etc/NAE/A
 COPY ./NAE/screenshot.png /etc/NAE/screenshot.png
 
 # This is an entrypoint wrapper script, which will be referenced in AppDef.json as the command
-COPY ./scripts/start.sh /usr/local/scripts/start.sh
 COPY ./scripts/stylize.sh /usr/local/scripts/stylize.sh
 COPY ./scripts/display_wrapper.sh /usr/local/scripts/display_wrapper.sh
 
