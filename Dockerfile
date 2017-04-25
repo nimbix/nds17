@@ -23,7 +23,7 @@ USER root
 # Install an application to display an image
 # NB: apt-get clean is an image layer size optimization
 RUN apt-get update && \
-    apt-get install -y pinta imagemagick curl && \
+    apt-get install -y pinta curl && \
     apt-get clean
 
 # AppDef.json defines the workflow in the portal. See the JARVICE
